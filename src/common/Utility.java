@@ -4,11 +4,12 @@ import java.io.*;
 
 public class Utility {
 
-    public static boolean sendFile(File file, BufferedOutputStream bw ) {
+    public static boolean sendFile(File file, BufferedOutputStream bw , boolean writeSize) {
         try{
-//            if(writeSize){
-//                bw.write(file.length());
-//            }
+            if(writeSize){
+                String size = file.length() + "\n";
+                bw.write(size.getBytes());
+            }
             byte[] buffer = new byte[1024];
             int n;
             BufferedInputStream br = new BufferedInputStream(new FileInputStream(file));
@@ -42,6 +43,7 @@ public class Utility {
                 extension.equalsIgnoreCase("png") ||
                 extension.equalsIgnoreCase("svg");
     }
+
 
 
 }

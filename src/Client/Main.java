@@ -9,9 +9,9 @@ public class Main {
     public static void main(String[] args){
         System.out.println("From client");
         try {
-            Socket socket = new Socket("localhost", 5008);
             Scanner scanner = new Scanner(System.in);
             while(true){
+                Socket socket = new Socket("localhost", 5008);
                 System.out.println("Enter file path: ");
                 String fileName = scanner.nextLine();
                 File file = new File("./src/client/" + fileName);

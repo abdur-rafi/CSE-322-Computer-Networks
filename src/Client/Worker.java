@@ -20,14 +20,19 @@ public class Worker extends Thread {
         this.file = file;
     }
 
+
     @Override
     public void run() {
 
-        Utility.sendFile(file, bos);
         try {
+            bos.write(("UPLOAD " + file.getName() + "\n").getBytes());
+            bos.flush();
+            Utility.sendFile(file, bos, true);
             bos.flush();
             bos.close();
             socket.close();
+//            FileReader reader = new FileReader(file);
+//            reader.re
 
         } catch (IOException e) {
             e.printStackTrace();
