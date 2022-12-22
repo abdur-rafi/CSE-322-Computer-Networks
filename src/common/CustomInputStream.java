@@ -4,13 +4,12 @@ import java.io.IOException;
 import java.io.InputStream;
 
 public class CustomInputStream {
-    private byte[] buffer;
     private InputStream is;
 
     public CustomInputStream(InputStream is){
         this.is = is;
     }
-    public String getLine() throws IOException {
+    public String readLine() throws IOException {
         StringBuilder s = new StringBuilder();
         int c;
 
@@ -34,9 +33,4 @@ public class CustomInputStream {
         is.close();
     }
 
-
-    public static void main(String[] args){
-
-
-    }
 }

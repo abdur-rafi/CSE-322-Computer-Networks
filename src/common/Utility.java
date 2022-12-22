@@ -16,6 +16,7 @@ public class Utility {
             while((n = br.read(buffer)) != -1){
                 bw.write(buffer, 0, n);
             }
+            br.close();
 //            System.out.println("here2");
         }
         catch (IOException e){

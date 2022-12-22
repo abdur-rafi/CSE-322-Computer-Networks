@@ -25,14 +25,13 @@ public class Worker extends Thread {
     public void run() {
 
         try {
-            bos.write(("UPLOAD " + file.getName() + "\n").getBytes());
+            bos.write(("UPLOAD " + file.getName().replace(" ", "%20") + "\n").getBytes());
             bos.flush();
             Utility.sendFile(file, bos, true);
             bos.flush();
             bos.close();
             socket.close();
-//            FileReader reader = new FileReader(file);
-//            reader.re
+
 
         } catch (IOException e) {
             e.printStackTrace();

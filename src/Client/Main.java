@@ -1,5 +1,7 @@
 package Client;
 
+import common.Utility;
+
 import java.io.File;
 import java.io.IOException;
 import java.net.Socket;
@@ -23,6 +25,9 @@ public class Main {
                 }
                 else{
                     new Worker(socket, file).start();
+                    if(!(Utility.isText(file) || Utility.isImage(file))){
+                        System.out.println("File Type Not Supported");
+                    }
                 }
             }
         } catch (IOException e) {

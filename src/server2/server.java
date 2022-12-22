@@ -9,7 +9,7 @@ import java.net.Socket;
 public class server {
     public static void main(String[] args) throws IOException {
 
-//        BufferedInputStream reader = new BufferedInputStream(new FileInputStream("./src/client/dog_image.jpg"));
+//        BufferedInputStream reader = new BufferedInputStream(new FileInputStream("./src/client/dog image.jpg"));
 //        BufferedOutputStream writer = new BufferedOutputStream(new FileOutputStream("test.jpg"));
 //        String line;
 //        int c = 0;
@@ -35,7 +35,7 @@ public class server {
 //                BufferedReader r = new BufferedReader(new InputStreamReader(socket.getInputStream()));
 //                System.out.println(r.readLine());
                 CustomInputStream cis = new CustomInputStream(socket.getInputStream());
-                System.out.println(cis.getLine());
+                System.out.println(cis.readLine());
             }
         } catch (IOException e) {
             e.printStackTrace();

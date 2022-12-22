@@ -1,23 +1,23 @@
 package Server.SocketServer;
 
+import common.CustomInputStream;
 import common.Utility;
 
 import java.io.*;
 import java.net.Socket;
-import java.nio.charset.StandardCharsets;
 import java.util.Date;
 
 public class Worker extends Thread {
     private Socket socket;
     private String header;
     BufferedOutputStream bos;
-    BufferedReader reader;
+    CustomInputStream reader;
 
     public Worker(Socket socket) throws IOException {
         this.socket = socket;
         header = "HTTP/1.1 %d %s\r\nServer: Java HTTP Server : 1.0\r\nDate: %s\r\nContent-Type: %s\r\nContent-Length: %d\r\n\r\n";
         bos = new BufferedOutputStream(socket.getOutputStream());
-        reader = new BufferedReader(new InputStreamReader(socket.getInputStream(), StandardCharsets.UTF_8));
+        reader = new CustomInputStream(socket.getInputStream());
     }
 
 
@@ -69,46 +69,17 @@ public class Worker extends Thread {
     void receiveFile(String filename ) throws IOException {
         String size = reader.readLine();
         System.out.println("filename : " + filename + " size: " + size);
-
         long sz = Long.parseLong(size);
-
         int bufferSize = 512;
-//        byte[] buffer = new byte[bufferSize];
-        char[] buffer = new char[bufferSize];
-
-        //        reader.reset();
-
-        BufferedInputStream bis = new BufferedInputStream(socket.getInputStream());
+        byte[] buffer = new byte[bufferSize];
         int readChar = 0;
-//        BufferedWriter bos = new BufferedWriter(new FileWriter("./root/upload/" + filename));
         BufferedOutputStream bos = new BufferedOutputStream(new FileOutputStream("./root/upload/" + filename));
-
         while(sz > 0){
-
             readChar = reader.read(buffer, 0, bufferSize);
-            System.out.println(readChar);
-            String str = new String(buffer,0,readChar);
-            if(readChar < 0)
-                break;
+            if(readChar < 0) return;
             sz -= readChar;
-            System.out.println(str);
-            bos.write(str.getBytes());
+            bos.write(buffer, 0, readChar);
         }
-
-//        byte[] buffer = new byte[bufferSize];
-//        int readChar;
-//        BufferedOutputStream bos = new BufferedOutputStream(new FileOutputStream("./root/upload" + filename));
-//        BufferedInputStream bis = new BufferedInputStream(socket.getInputStream());
-//        while(sz > 0){
-//
-//            readChar = bis.read(buffer, 0, bufferSize);
-//            System.out.println(readChar);
-//            if(readChar < 0)
-//                break;
-//            sz -= readChar;
-//            bos.write(buffer, 0, readChar);
-//        }
-
         System.out.println("here");
 
         bos.flush();
@@ -133,9 +104,7 @@ public class Worker extends Thread {
     public void run() {
         try {
             InputStream isr = socket.getInputStream();
-//            BufferedReader br = new BufferedReader(new InputStreamReader(isr));
-            String s, f;
-//            f = (String)ois.readObject();
+            String f;
             f = reader.readLine();
             System.out.println("f:" + f);
             if (f.startsWith("GET")) {
@@ -169,10 +138,14 @@ public class Worker extends Thread {
                 bos.flush();
 
             } else if (f.startsWith("UPLOAD")) {
-//                System.out.println("here");
                 String filename = getQuery(f);
                 if(filename.length() == 0){
                     System.out.println("Invalid file name");
+                    return;
+                }
+                File file = new File(filename);
+                if(!(Utility.isText(file) || Utility.isImage(file))){
+                    System.out.println("File Type Not Supported");
                     return;
                 }
                 receiveFile(filename);
