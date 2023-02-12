@@ -2,6 +2,7 @@
 out
 .idea
 **.iml
-
+**.tr
+**.nam
 
 root
