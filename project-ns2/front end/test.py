@@ -15,7 +15,7 @@ with open(sys.argv[1]) as f:
     # print(words, words2)
     for i in range(len(words)):
         if words[i] == 0:
-            val = 1
+            val = 0
         else:
             val = ((words2[i] - words[i]) / words[i] ) * 100
         print("{:.5f}".format(val), end=" ")

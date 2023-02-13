@@ -1,0 +1,40 @@
+num_nodes is set 42
+channel.cc:sendUp - Calc highestAntennaZ_ asdf and distCST_
+highestAntennaZ_ = 1.5,  distCST_ = 550.0
+N: 15 r:0.481547 q:2.790546 alpha:0.900000 t_rtt:654 t_rtt_min:366 srtt:3575 avgwnd:8.560828 avgRtt:543.000000
+N: 15 r:0.374787 q:2.205372 alpha:0.900000 t_rtt:726 t_rtt_min:413 srtt:3880 avgwnd:6.662886 avgRtt:617.333333
+N: 16 r:0.864094 q:1.057893 alpha:0.900000 t_rtt:468 t_rtt_min:404 srtt:3425 avgwnd:16.321781 avgRtt:432.000000
+N: 15 r:0.614381 q:1.570192 alpha:0.900000 t_rtt:724 t_rtt_min:542 srtt:4518 avgwnd:10.922324 avgRtt:633.000000
+N: 15 r:0.377089 q:1.281881 alpha:0.900000 t_rtt:682 t_rtt_min:442 srtt:4668 avgwnd:6.703808 avgRtt:546.500000
+N: 14 r:0.513650 q:2.790546 alpha:0.900000 t_rtt:654 t_rtt_min:366 srtt:3575 avgwnd:8.560828 avgRtt:543.000000
+N: 15 r:0.252188 q:1.173951 alpha:0.900000 t_rtt:934 t_rtt_min:514 srtt:4644 avgwnd:4.483333 avgRtt:696.333333
+N: 14 r:0.399773 q:2.205372 alpha:0.900000 t_rtt:726 t_rtt_min:413 srtt:3880 avgwnd:6.662886 avgRtt:617.333333
+N: 15 r:0.485944 q:2.563377 alpha:0.900000 t_rtt:559 t_rtt_min:429 srtt:4079 avgwnd:8.639007 avgRtt:610.000000
+N: 15 r:0.202206 q:0.879840 alpha:0.900000 t_rtt:902 t_rtt_min:540 srtt:4958 avgwnd:3.594774 avgRtt:715.000000
+N: 15 r:0.645593 q:1.970203 alpha:0.900000 t_rtt:860 t_rtt_min:608 srtt:5116 avgwnd:11.477216 avgRtt:734.000000
+N: 15 r:0.352449 q:1.965314 alpha:0.900000 t_rtt:744 t_rtt_min:407 srtt:4401 avgwnd:6.265761 avgRtt:593.000000
+N: 15 r:0.780328 q:4.195463 alpha:0.900000 t_rtt:690 t_rtt_min:427 srtt:4591 avgwnd:13.872506 avgRtt:612.125000
+N: 15 r:0.394380 q:1.910588 alpha:0.900000 t_rtt:695 t_rtt_min:417 srtt:4828 avgwnd:7.011198 avgRtt:573.200000
+N: 15 r:0.743019 q:2.574843 alpha:0.900000 t_rtt:715 t_rtt_min:404 srtt:4123 avgwnd:13.209230 avgRtt:501.818182
+N: 15 r:0.343140 q:1.314714 alpha:0.900000 t_rtt:737 t_rtt_min:546 srtt:6146 avgwnd:6.100272 avgRtt:696.000000
+N: 14 r:0.378709 q:1.206927 alpha:0.900000 t_rtt:682 t_rtt_min:442 srtt:4668 avgwnd:6.311824 avgRtt:546.500000
+N: 15 r:0.440997 q:2.626976 alpha:0.900000 t_rtt:981 t_rtt_min:424 srtt:4023 avgwnd:7.839946 avgRtt:637.666667
+N: 14 r:0.639306 q:1.531775 alpha:0.900000 t_rtt:724 t_rtt_min:542 srtt:4518 avgwnd:10.655092 avgRtt:633.000000
+N: 14 r:0.269000 q:1.173951 alpha:0.900000 t_rtt:934 t_rtt_min:514 srtt:4644 avgwnd:4.483333 avgRtt:696.333333
+N: 14 r:0.507574 q:2.510136 alpha:0.900000 t_rtt:559 t_rtt_min:429 srtt:4079 avgwnd:8.459574 avgRtt:610.000000
+N: 15 r:0.444311 q:2.285121 alpha:0.900000 t_rtt:756 t_rtt_min:425 srtt:3896 avgwnd:7.898858 avgRtt:598.000000
+N: 15 r:0.223960 q:1.608961 alpha:0.900000 t_rtt:671 t_rtt_min:412 srtt:4468 avgwnd:3.981517 avgRtt:691.400000
+N: 15 r:0.675277 q:2.437462 alpha:0.900000 t_rtt:791 t_rtt_min:577 srtt:5916 avgwnd:12.004917 avgRtt:724.000000
+N: 14 r:0.375946 q:1.965314 alpha:0.900000 t_rtt:744 t_rtt_min:407 srtt:4401 avgwnd:6.265761 avgRtt:593.000000
+N: 15 r:0.349397 q:1.234413 alpha:0.900000 t_rtt:742 t_rtt_min:547 srtt:5870 avgwnd:6.211494 avgRtt:682.666667
+N: 14 r:0.420672 q:1.910588 alpha:0.900000 t_rtt:695 t_rtt_min:417 srtt:4828 avgwnd:7.011198 avgRtt:573.200000
+N: 14 r:0.787340 q:2.557905 alpha:0.900000 t_rtt:715 t_rtt_min:404 srtt:4123 avgwnd:13.122336 avgRtt:501.818182
+N: 16 r:0.539305 q:3.646109 alpha:0.900000 t_rtt:653 t_rtt_min:412 srtt:4408 avgwnd:10.186881 avgRtt:641.666667
+N: 14 r:0.688633 q:1.970203 alpha:0.900000 t_rtt:860 t_rtt_min:608 srtt:5116 avgwnd:11.477216 avgRtt:734.000000
+N: 13 r:0.550339 q:2.790546 alpha:0.900000 t_rtt:654 t_rtt_min:366 srtt:3575 avgwnd:8.560828 avgRtt:543.000000
+N: 15 r:0.271517 q:0.674888 alpha:0.900000 t_rtt:908 t_rtt_min:687 srtt:5817 avgwnd:4.826962 avgRtt:798.666667
+N: 15 r:0.461848 q:1.124909 alpha:0.900000 t_rtt:867 t_rtt_min:590 srtt:5001 avgwnd:8.210638 avgRtt:683.666667
+N: 13 r:0.428328 q:2.205372 alpha:0.900000 t_rtt:726 t_rtt_min:413 srtt:3880 avgwnd:6.662886 avgRtt:617.333333
+N: 14 r:0.470397 q:2.626976 alpha:0.900000 t_rtt:981 t_rtt_min:424 srtt:4023 avgwnd:7.839946 avgRtt:637.666667
+N: 14 r:0.600051 q:2.105443 alpha:0.900000 t_rtt:592 t_rtt_min:540 srtt:4960 avgwnd:10.000853 avgRtt:684.000000
+N: 14 r:0.763546 q:4.036156 alpha:0.900000 t_rtt:731 t_rtt_min:427 srtt:4749 avgwnd:12.725764 avgRtt:625.333333

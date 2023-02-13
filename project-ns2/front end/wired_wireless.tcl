@@ -10,9 +10,11 @@ set useFit [lindex $argv 5]
 set N [lindex $argv 6]
 set alpha [lindex $argv 7]
 set bandwidth [lindex $argv 8]
+set dropRate [lindex $argv 9]
+set traceFile [lindex $argv 10]
+set namTraceFile [lindex $argv 11]
 
 set Y $X
-Queue/DropTail set drop_probability 0
 global opt
 set opt(chan)       Channel/WirelessChannel
 set opt(prop)       Propagation/TwoRayGround
@@ -22,12 +24,13 @@ set opt(ifq)        Queue/DropTail/PriQueue
 set opt(ll)         LL
 set opt(ant)        Antenna/OmniAntenna
 set opt(ifqlen)         50
-set opt(tr)          wired-and-wireless.tr
-set opt(namtr)       wired-and-wireless.nam
 set opt(nWired)         1
 set opt(adhocRouting)   DSDV
 set opt(cp)             ""
 set opt(sc)             "../mobility/scene/scen-3-test"
+
+set startTime 10
+set delay 0
 set stopTime 40
 
 
@@ -43,15 +46,14 @@ AddrParams set cluster_num_ $cluster_num
 lappend eilastlevel [expr $opt(nWired)] [expr $N1 + 1] [expr $N2 + 1]
 AddrParams set nodes_num_ $eilastlevel
 
-set traceFile  [open $opt(tr) w]
+set traceFile  [open $traceFile w]
 $ns trace-all $traceFile
-set namTraceFile [open $opt(namtr) w]
+set namTraceFile [open $namTraceFile w]
 $ns namtrace-all $namTraceFile
 
 
 set topo   [new Topography]
 $topo load_flatgrid $X $Y
-# god needs to know the number of all wireless interfaces
 create-god [expr $N1 + $N2 + 2]
 
 # create addresses
@@ -103,13 +105,16 @@ $BS(1) set X_ [expr $X - 10]
 $BS(1) set Y_ [expr $Y / 2]
 $BS(1) set Z_ 0.0
 
-
-$ns duplex-link $W(0) $BS(0) 500Mb 100ms DropTail
-$ns duplex-link $W(0) $BS(1) 500Mb 100ms DropTail
+$ns duplex-link $W(0) $BS(0) 2Gb 500ms DropTail
+$ns duplex-link $W(0) $BS(1) 2Gb 500ms DropTail
 $ns duplex-link-op $W(0) $BS(0) orient left
 $ns duplex-link-op $W(0) $BS(1) orient right
 
+set loss_module0 [new ErrorModel/Uniform $dropRate pkt ]
+set loss_module1 [new ErrorModel/Uniform $dropRate pkt ]
 
+$ns link-lossmodel $loss_module0 $W(0) $BS(0)
+$ns link-lossmodel $loss_module1 $W(0) $BS(1) 
 
 
 set radius 100
@@ -214,11 +219,10 @@ for {set i 0} {$i < $F} {incr i} {
 
   $ns attach-agent $sinkNodes([round [floor [expr [rand] * $N2]]]) $sinkAgent($i)
   $ns connect $srcAgents($i) $sinkAgent($i)
-  $ns at 10 "$traffic($i) start"
+  $ns at $startTime "$traffic($i) start"
   $ns at $stopTime "$traffic($i) stop"
 
 }
-
 
 
 proc stop {} {
@@ -226,7 +230,7 @@ proc stop {} {
     global ns traceFile namTraceFile
     $ns flush-trace
     close $traceFile
-	close $namTraceFile
+    close $namTraceFile
     exit 0
     # exec nam offline.nam
 }
@@ -255,13 +259,6 @@ $ns run
 #   $ftp2 attach-agent $tcp2
 #   $ns at 180 "$ftp2 start"
 
-for {set i 0} {$i < $opt(n1)} {incr i} {
-  $ns initial_node_pos $src($i) 10
-}
-
-for {set i 0} {$i < $opt(n2)} {incr i} {
-  $ns initial_node_pos $dest($i) 10
-}
 
 # for {set i } {$i < $opt(n1) } {incr i} {
 #   $ns at $opt(stop).0000010 "$src($i) reset";
@@ -276,7 +273,6 @@ for {set i 0} {$i < $opt(n2)} {incr i} {
 # $ns at $opt(stop).1 "puts \"NS EXITING...\" ; $ns halt"
 
 #   puts "Starting Simulation..."
-$ns run
 
 
 

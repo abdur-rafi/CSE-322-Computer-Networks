@@ -52,4 +52,5 @@ main="./wireless/$bd"
 
     done
 done
-# ns wireless.tcl 30 30 4 30 5000 1 1 .5 100mb > -.txt
+# ns wireless.tcl 30 30 3 30 5000 1 1 .5 100mb > -.txt
+ns wired.tcl 30 30 3 30 5000 1 1 .5 100mb .01 test.tr test.nam
