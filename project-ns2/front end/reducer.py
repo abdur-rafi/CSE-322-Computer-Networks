@@ -1,6 +1,11 @@
 import sys
+coeffs = [.3, .45, .4, .3]
+coeffs = [.3, 0, 0, 0]
+
 def computCost(words):
-    return words[0] * .3 - words[1] * .45 + words[2] * .4 - words[3] * .3
+    return words[0] * coeffs[0] - words[1] * coeffs[1] \
++ words[2] * coeffs[2] - words[3] * coeffs[3]
+    
 best = []
 mxCost = -1000000
 for line in open(sys.argv[1]):

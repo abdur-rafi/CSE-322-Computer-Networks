@@ -15,7 +15,7 @@ def plot(figsize,x,y,label,xLabel, yLabel,saveFile):
     # plt.show()
 
 
-for j in range(2,3):
+for j in range(0,3):
 
     
     throughput = []

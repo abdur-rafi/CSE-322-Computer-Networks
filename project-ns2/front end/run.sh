@@ -7,6 +7,7 @@ f=40
 drRate=.05
 nodes=20
 area=5000
+repeat=25
 if [[ $1 == 0 ]];then
     main="./stats/wired-2"
     srcFile=wired.tcl

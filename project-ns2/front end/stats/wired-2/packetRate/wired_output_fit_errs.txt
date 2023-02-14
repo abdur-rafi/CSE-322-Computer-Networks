@@ -4,7 +4,240 @@ warning: no class variable Queue/DropTail::seed
 
 warning: no class variable Queue/DropTail::drop_probability
 
-INITIALIZE THE LIST xListHead
+warning: no class variable Queue/DropTail::seed
+
+	see tcl-object.tcl in tclcl for info about this warning.
+
+warning: no class variable Queue/DropTail::drop_probability
+
+warning: no class variable Queue/DropTail::seed
+
+	see tcl-object.tcl in tclcl for info about this warning.
+
+warning: no class variable Queue/DropTail::drop_probability
+
+warning: no class variable Queue/DropTail::seed
+
+	see tcl-object.tcl in tclcl for info about this warning.
+
+warning: no class variable Queue/DropTail::drop_probability
+
+warning: no class variable Queue/DropTail::seed
+
+	see tcl-object.tcl in tclcl for info about this warning.
+
+warning: no class variable Queue/DropTail::drop_probability
+
+warning: no class variable Queue/DropTail::seed
+
+	see tcl-object.tcl in tclcl for info about this warning.
+
+warning: no class variable Queue/DropTail::drop_probability
+
+warning: no class variable Queue/DropTail::seed
+
+	see tcl-object.tcl in tclcl for info about this warning.
+
+warning: no class variable Queue/DropTail::drop_probability
+
+warning: no class variable Queue/DropTail::seed
+
+	see tcl-object.tcl in tclcl for info about this warning.
+
+warning: no class variable Queue/DropTail::drop_probability
+
+warning: no class variable Queue/DropTail::seed
+
+	see tcl-object.tcl in tclcl for info about this warning.
+
+warning: no class variable Queue/DropTail::drop_probability
+
+warning: no class variable Queue/DropTail::seed
+
+	see tcl-object.tcl in tclcl for info about this warning.
+
+warning: no class variable Queue/DropTail::drop_probability
+
+warning: no class variable Queue/DropTail::seed
+
+	see tcl-object.tcl in tclcl for info about this warning.
+
+warning: no class variable Queue/DropTail::drop_probability
+
+warning: no class variable Queue/DropTail::seed
+
+	see tcl-object.tcl in tclcl for info about this warning.
+
+warning: no class variable Queue/DropTail::drop_probability
+
+warning: no class variable Queue/DropTail::seed
+
+	see tcl-object.tcl in tclcl for info about this warning.
+
+warning: no class variable Queue/DropTail::drop_probability
+
+warning: no class variable Queue/DropTail::seed
+
+	see tcl-object.tcl in tclcl for info about this warning.
+
+warning: no class variable Queue/DropTail::drop_probability
+
+warning: no class variable Queue/DropTail::seed
+
+	see tcl-object.tcl in tclcl for info about this warning.
+
+warning: no class variable Queue/DropTail::drop_probability
+
+warning: no class variable Queue/DropTail::seed
+
+	see tcl-object.tcl in tclcl for info about this warning.
+
+warning: no class variable Queue/DropTail::drop_probability
+
+warning: no class variable Queue/DropTail::seed
+
+	see tcl-object.tcl in tclcl for info about this warning.
+
+warning: no class variable Queue/DropTail::drop_probability
+
+warning: no class variable Queue/DropTail::seed
+
+	see tcl-object.tcl in tclcl for info about this warning.
+
+warning: no class variable Queue/DropTail::drop_probability
+
+warning: no class variable Queue/DropTail::seed
+
+	see tcl-object.tcl in tclcl for info about this warning.
+
+warning: no class variable Queue/DropTail::drop_probability
+
+warning: no class variable Queue/DropTail::seed
+
+	see tcl-object.tcl in tclcl for info about this warning.
+
+warning: no class variable Queue/DropTail::drop_probability
+
+warning: no class variable Queue/DropTail::seed
+
+	see tcl-object.tcl in tclcl for info about this warning.
+
+warning: no class variable Queue/DropTail::drop_probability
+
+warning: no class variable Queue/DropTail::seed
+
+	see tcl-object.tcl in tclcl for info about this warning.
+
+warning: no class variable Queue/DropTail::drop_probability
+
+warning: no class variable Queue/DropTail::seed
+
+	see tcl-object.tcl in tclcl for info about this warning.
+
+warning: no class variable Queue/DropTail::drop_probability
+
+warning: no class variable Queue/DropTail::seed
+
+	see tcl-object.tcl in tclcl for info about this warning.
+
+warning: no class variable Queue/DropTail::drop_probability
+
+warning: no class variable Queue/DropTail::seed
+
+	see tcl-object.tcl in tclcl for info about this warning.
+
+warning: no class variable Queue/DropTail::drop_probability
+
+warning: no class variable Queue/DropTail::seed
+
+	see tcl-object.tcl in tclcl for info about this warning.
+
+warning: no class variable Queue/DropTail::drop_probability
+
+warning: no class variable Queue/DropTail::seed
+
+	see tcl-object.tcl in tclcl for info about this warning.
+
+warning: no class variable Queue/DropTail::drop_probability
+
+warning: no class variable Queue/DropTail::seed
+
+	see tcl-object.tcl in tclcl for info about this warning.
+
+warning: no class variable Queue/DropTail::drop_probability
+
+warning: no class variable Queue/DropTail::seed
+
+	see tcl-object.tcl in tclcl for info about this warning.
+
+warning: no class variable Queue/DropTail::drop_probability
+
+warning: no class variable Queue/DropTail::seed
+
+	see tcl-object.tcl in tclcl for info about this warning.
+
+warning: no class variable Queue/DropTail::drop_probability
+
+warning: no class variable Queue/DropTail::seed
+
+	see tcl-object.tcl in tclcl for info about this warning.
+
+warning: no class variable Queue/DropTail::drop_probability
+
+warning: no class variable Queue/DropTail::seed
+
+	see tcl-object.tcl in tclcl for info about this warning.
+
+warning: no class variable Queue/DropTail::drop_probability
+
+warning: no class variable Queue/DropTail::seed
+
+	see tcl-object.tcl in tclcl for info about this warning.
+
+warning: no class variable Queue/DropTail::drop_probability
+
+warning: no class variable Queue/DropTail::seed
+
+	see tcl-object.tcl in tclcl for info about this warning.
+
+warning: no class variable Queue/DropTail::drop_probability
+
+warning: no class variable Queue/DropTail::seed
+
+	see tcl-object.tcl in tclcl for info about this warning.
+
+warning: no class variable Queue/DropTail::drop_probability
+
+warning: no class variable Queue/DropTail::seed
+
+	see tcl-object.tcl in tclcl for info about this warning.
+
+warning: no class variable Queue/DropTail::drop_probability
+
+warning: no class variable Queue/DropTail::seed
+
+	see tcl-object.tcl in tclcl for info about this warning.
+
+warning: no class variable Queue/DropTail::drop_probability
+
+warning: no class variable Queue/DropTail::seed
+
+	see tcl-object.tcl in tclcl for info about this warning.
+
+warning: no class variable Queue/DropTail::drop_probability
+
+warning: no class variable Queue/DropTail::seed
+
+	see tcl-object.tcl in tclcl for info about this warning.
+
+warning: no class variable Queue/DropTail::drop_probability
+
+warning: no class variable Queue/DropTail::seed
+
+	see tcl-object.tcl in tclcl for info about this warning.
+
+warning: no class variable Queue/DropTail::drop_probability
+
 warning: no class variable Queue/DropTail::seed
 
 	see tcl-object.tcl in tclcl for info about this warning.
@@ -497,4 +730,3 @@ warning: no class variable Agent/TCP/FitW::N
 
 warning: no class variable Agent/TCP/FitW::alpha
 
-SORTING LISTS ...DONE!
