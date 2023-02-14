@@ -16,7 +16,7 @@ set namTraceFile [lindex $argv 11]
 set stopTime 40
 set delay 0
 set startTime 10
-set radius 200
+set radius 100
 set bottleNeckXOffset 300
 set bottleNeckYOffset 300
 set bottleNeckGap 250
@@ -40,6 +40,7 @@ create-god [expr $N1 + $N2 + $B]
 set channel [new Channel/WirelessChannel]
 expr { srand(19) }
 
+# LL set delay_ 100ms
 
 $ns node-config -adhocRouting DSDV \
     -llType LL \
@@ -62,10 +63,8 @@ proc UniformErr {} {
     return $err
 }
 
-LL set delay_ 300ms
 
-$ns node-config -IncomingErrProc UniformErr -OutgoingErrProc UniformErr \
-    -llType LL \
+$ns node-config -IncomingErrProc UniformErr  \
 
 
 set angleOffset .3

@@ -402,7 +402,7 @@ void TcpAgentMod::timeout(int tno)
     //     return;
     // double q = ((t_srtt_ - t_rtt_min) * awnd_) / t_srtt_;
     // double r = (alpha * awnd_) / N;
-	if (windowUpdateCount == 0 || rttUpdateCount == 0)
+	if (windowUpdateCount == 0 || rttUpdateCount == 0 || rttSum == 0 )
 		return;
 	double avgwnd = windowSum * 1. / windowUpdateCount;
 	double avgRtt = rttSum * 1. / rttUpdateCount;
@@ -416,9 +416,10 @@ void TcpAgentMod::timeout(int tno)
     }
     else{
         N = N > 2 ? N - 1 : 1;
-		printf("N: %d r:%lf q:%lf alpha:%lf t_rtt:%d t_rtt_min:%d srtt:%d avgwnd:%lf avgRtt:%lf\n", N,r,q,alpha, t_rtt_.getValue()
-		, t_rtt_min.getValue(), t_srtt_.getValue(), avgwnd, avgRtt);
     }
+
+	printf("N: %d r:%lf q:%lf alpha:%lf t_rtt:%d t_rtt_min:%d srtt:%d avgwnd:%lf avgRtt:%lf\n", N,r,q,alpha, t_rtt_.getValue()
+	, t_rtt_min.getValue(), t_srtt_.getValue(), avgwnd, avgRtt);
 }
 
 

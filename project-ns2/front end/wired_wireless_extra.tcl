@@ -13,6 +13,8 @@ set bandwidth [lindex $argv 8]
 set dropRate [lindex $argv 9]
 set traceFile [lindex $argv 10]
 set namTraceFile [lindex $argv 11]
+set linkDelay [lindex $argv 12]
+
 
 set Y $X
 global opt
@@ -105,8 +107,8 @@ $BS(1) set X_ [expr $X - 10]
 $BS(1) set Y_ [expr $Y / 2]
 $BS(1) set Z_ 0.0
 
-$ns duplex-link $W(0) $BS(0) 2Gb 500ms DropTail
-$ns duplex-link $W(0) $BS(1) 2Gb 500ms DropTail
+$ns duplex-link $W(0) $BS(0) 2Gb $linkDelay DropTail
+$ns duplex-link $W(0) $BS(1) 2Gb $linkDelay DropTail
 $ns duplex-link-op $W(0) $BS(0) orient left
 $ns duplex-link-op $W(0) $BS(1) orient right
 

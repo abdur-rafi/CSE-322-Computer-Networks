@@ -33,15 +33,21 @@ fi
 # ns wired_wireless.tcl 10 10 2 10 650 0 1 .5 10mb .1 test.tr test.nam
 # arguments : nodes, flow, bandwidth
 oneIteration(){
-
-    ns $srcFile $1 $1 $bn $2 $area 0 _ _ $3 $drRate $trFile $namFile >  "$root/wired_output_tcp.txt"
+    echo "nodes: $1 flows: $2 bandwidth: $3"
+    ns $srcFile $1 $1 $bn $2 $area 0 _ _ $3 $drRate $trFile $namFile 1>  "$root/wired_output_tcp.txt" 2> "$root/wired_output_tcp_errs.txt"
+    echo "tcp simulation done"
     ./parser < $trFile >> "$root/stats-tcp.txt"
-    for N in 1 2 4 8 
+    echo "tcp parsing done"
+    for N in 1 2 4 8 16
     do
-        for alpha in .1 .3 .5 
+        for alpha in .1 .3 .5 .7 .9
         do
-            ns $srcFile  $1 $1 $bn $2 $area 1 $N $alpha $3 $drRate $trFile $namFile >  "$root/wired_output_fit.txt"
-            # ./parser < $trFile | python3 test.py "$root/stats-tcp.txt" >>  "$root/stats-fit.txt"
+            echo "N: $N alpha: $alpha"
+            ns $srcFile  $1 $1 $bn $2 $area 1 $N $alpha $3 $drRate $trFile $namFile 1>  "$root/wired_output_fit.txt" 2> "$root/wired_output_fit_errs.txt"
+            echo "tcp fit simulation done"
+            ./parser < $trFile | python3 test.py "$root/stats-tcp.txt" >>  "$root/stats-fit.txt"
+            echo "tcp fit parsing done"
+
         done
     done
     echo "" >> "$root/stats-fit.txt"
@@ -49,18 +55,7 @@ oneIteration(){
 }
 
 
-root="$main/packetRate"
-mkdir -p $root
->"$root/stats-tcp.txt"
->"$root/stats-fit.txt"
-
-for prate in  20mb 40mb 60mb 80mb 100mb
-do
-    oneIteration $nodes $f $prate
-done
-
-
-
+echo "################################## nodes #######################################"
 root="$main/nodes"
 mkdir -p $root
 >"$root/stats-tcp.txt"
@@ -72,6 +67,7 @@ do
     oneIteration $n $f $bd
 done
 
+echo "################################## flows #######################################"
 
 root="$main/flows"
 mkdir -p $root
@@ -85,6 +81,18 @@ done
 
 
 
+
+echo "################################### packet rate #################################"
+
+root="$main/packetRate"
+mkdir -p $root
+>"$root/stats-tcp.txt"
+>"$root/stats-fit.txt"
+
+for prate in  20mb 40mb 60mb 80mb 100mb
+do
+    oneIteration $nodes $f $prate
+done
 
 
 # ns wireless.tcl 30 30 4 30 5000 1 1 .5 100mb > -.txt

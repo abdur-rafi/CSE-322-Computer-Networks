@@ -1,0 +1,9 @@
+num_nodes is set 4
+channel.cc:sendUp - Calc highestAntennaZ_ asdf and distCST_
+highestAntennaZ_ = 1.5,  distCST_ = 550.0
+N: 17 r:0.580773 q:0.098364 alpha:0.900000 t_rtt:203 t_rtt_min:201 srtt:1625 avgwnd:10.324857 avgRtt:202.933333
+N: 18 r:0.530112 q:0.098653 alpha:0.900000 t_rtt:204 t_rtt_min:201 srtt:1626 avgwnd:10.013230 avgRtt:203.000000
+N: 19 r:0.461267 q:0.111734 alpha:0.900000 t_rtt:203 t_rtt_min:201 srtt:1630 avgwnd:9.225349 avgRtt:203.464286
+N: 20 r:0.441650 q:0.111524 alpha:0.900000 t_rtt:203 t_rtt_min:201 srtt:1630 avgwnd:9.323728 avgRtt:203.433333
+N: 21 r:0.419568 q:0.111524 alpha:0.900000 t_rtt:203 t_rtt_min:201 srtt:1630 avgwnd:9.323728 avgRtt:203.433333
+N: 22 r:0.410089 q:0.112661 alpha:0.900000 t_rtt:203 t_rtt_min:201 srtt:1631 avgwnd:9.568745 avgRtt:203.394737

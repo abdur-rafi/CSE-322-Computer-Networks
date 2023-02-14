@@ -1,0 +1,14 @@
+num_nodes is set 4
+channel.cc:sendUp - Calc highestAntennaZ_ asdf and distCST_
+highestAntennaZ_ = 1.5,  distCST_ = 550.0
+N: 17 r:0.191250 q:0.008437 alpha:0.900000 t_rtt:202 t_rtt_min:201 srtt:1609 avgwnd:3.400000 avgRtt:201.500000
+N: 18 r:0.276793 q:0.051510 alpha:0.900000 t_rtt:206 t_rtt_min:201 srtt:1614 avgwnd:5.228312 avgRtt:203.000000
+N: 19 r:0.261416 q:0.051510 alpha:0.900000 t_rtt:206 t_rtt_min:201 srtt:1614 avgwnd:5.228312 avgRtt:203.000000
+N: 20 r:0.261960 q:0.067939 alpha:0.900000 t_rtt:205 t_rtt_min:201 srtt:1618 avgwnd:5.530273 avgRtt:203.500000
+N: 21 r:0.238669 q:0.065157 alpha:0.900000 t_rtt:205 t_rtt_min:201 srtt:1618 avgwnd:5.303759 avgRtt:203.500000
+N: 22 r:0.227304 q:0.065157 alpha:0.900000 t_rtt:205 t_rtt_min:201 srtt:1618 avgwnd:5.303759 avgRtt:203.500000
+N: 23 r:0.216972 q:0.065157 alpha:0.900000 t_rtt:205 t_rtt_min:201 srtt:0 avgwnd:5.303759 avgRtt:203.500000
+N: 24 r:0.282484 q:0.168374 alpha:0.900000 t_rtt:215 t_rtt_min:201 srtt:1720 avgwnd:7.219029 avgRtt:205.800000
+N: 25 r:0.322466 q:0.200562 alpha:0.900000 t_rtt:215 t_rtt_min:201 srtt:1720 avgwnd:8.599096 avgRtt:205.800000
+N: 26 r:0.293278 q:0.181162 alpha:0.900000 t_rtt:208 t_rtt_min:201 srtt:1702 avgwnd:8.146621 avgRtt:205.571429
+N: 27 r:0.316717 q:0.203466 alpha:0.900000 t_rtt:208 t_rtt_min:201 srtt:1702 avgwnd:9.149603 avgRtt:205.571429
