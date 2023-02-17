@@ -13,8 +13,12 @@ set bandwidth [lindex $argv 8]
 set dropRate [lindex $argv 9]
 set traceFile [lindex $argv 10]
 set namTraceFile [lindex $argv 11]
+set speed [lindex $argv 12]
 
-set Y $X
+
+set radius 100
+set Y [expr 2 * $radius + 10]
+
 global opt
 set opt(chan)       Channel/WirelessChannel
 set opt(prop)       Propagation/TwoRayGround
@@ -27,7 +31,7 @@ set opt(ifqlen)         50
 set opt(nWired)         1
 set opt(adhocRouting)   DSDV
 set opt(cp)             ""
-set opt(sc)             "../mobility/scene/scen-3-test"
+# set opt(sc)             "../mobility/scene/scen-3-test"
 
 set startTime 10
 set delay 0
@@ -36,7 +40,7 @@ set stopTime 40
 
 set ns   [new Simulator]
 $ns use-newtrace
-expr { srand(19) }
+# expr { srand(19) }
 
 # set up for hierarchical routing
 $ns node-config -addressType hierarchical
@@ -49,7 +53,7 @@ AddrParams set nodes_num_ $eilastlevel
 set traceFile  [open $traceFile w]
 $ns trace-all $traceFile
 set namTraceFile [open $namTraceFile w]
-$ns namtrace-all $namTraceFile
+$ns namtrace-all-wireless $namTraceFile $X $Y
 
 
 set topo   [new Topography]
@@ -60,12 +64,13 @@ create-god [expr $N1 + $N2 + 2]
 
 set waddr {0.0.0}
 for {set i 0} {$i < $opt(nWired)} {incr i} {
-  lappend $waddr 0.0.$i
+  lappend waddr 0.0.$i
 }
 set addr1 {1.0.0}
 for {set i 1} {$i - 1 < $N1} {incr i} {
   lappend addr1 1.0.$i
 }
+puts "$addr1"
 set addr2 {2.0.0}
 for {set i 1} {$i - 1 < $N2} {incr i} {
   lappend addr2 2.0.$i
@@ -79,6 +84,12 @@ $ns node-config -adhocRouting $opt(adhocRouting) \
   -macType $opt(mac) \
   -ifqType $opt(ifq) \
   -ifqLen $opt(ifqlen) \
+  -energyModel "EnergyModel" \
+  -initialEnergy 50.0 \
+  -txPower .4 \
+  -rxPower .3 \
+  -idlePower 0.1 \
+  -sleepPower .01 \
   -antType $opt(ant) \
   -propInstance [new $opt(prop)] \
   -phyType $opt(netif) \
@@ -86,8 +97,9 @@ $ns node-config -adhocRouting $opt(adhocRouting) \
   -topoInstance $topo \
   -wiredRouting ON \
   -agentTrace ON \
-  -routerTrace OFF \
-  -macTrace OFF
+  -routerTrace ON \
+  -macTrace OFF \
+  -movementTrace OFF \
 
 #  set up base stations
 
@@ -96,12 +108,12 @@ set BS(1) [$ns node [lindex $addr2 0]]
 $BS(0) random-motion 0
 $BS(1) random-motion 0
 
-$BS(0) set X_ 350
+$BS(0) set X_ 250
 $BS(0) set Y_ [expr $Y / 2]
 $BS(0) set Z_ 0.0
 
 
-$BS(1) set X_ [expr $X - 10]
+$BS(1) set X_ [expr $X - (250)]
 $BS(1) set Y_ [expr $Y / 2]
 $BS(1) set Z_ 0.0
 
@@ -117,7 +129,6 @@ $ns link-lossmodel $loss_module0 $W(0) $BS(0)
 $ns link-lossmodel $loss_module1 $W(0) $BS(1) 
 
 
-set radius 100
 set bottleNeckXOffset [$BS(0) set X_]
 set bottleNeckYOffset [$BS(0) set Y_]
 set bottleNeckGap [$BS(1) set X_]
@@ -143,12 +154,13 @@ for {set i 0} {$i < $N1} {incr i} {
   $srcNodes($i) base-station [AddrParams addr2id [$BS(0) node-addr]]
 
   $ns at $stopTime "$srcNodes($i) reset"
-  # random movement
 
-  # $srcNodes($i) random-motion 1
-  # $ns at 0.0 "$srcNodes($i) setdest [expr [rand] * $bottleNeckXOffset] [expr [rand] * $Y] [expr 1 + [rand] * 10]"
-  # $ns at [ expr $stopTime ] "$srcNodes($i) setdest [expr [rand] * $bottleNeckXOffset] [expr [rand] * $Y] [expr 1 + [rand] * 10]"
-
+  $srcNodes($i) random-motion 1
+  $ns at 0.0 "$srcNodes($i) setdest [expr [rand] * $bottleNeckXOffset] [expr [rand] * $Y] [expr 1 + [rand] * $speed]"
+  for {set j 0} {$j < 10} {incr j} {
+      $ns at [ expr $stopTime / (10 - $j) ] "$srcNodes($i) setdest [expr [rand] * $bottleNeckXOffset] [expr [rand] * $Y] [expr 1 + [rand] * $speed]"        
+  }
+  # $ns at 20.0 "$srcNodes($i) setdest 500 200 10"
 }
 
 # for {set j 0} {$j < $opt(n1)} {incr j} {
@@ -179,17 +191,12 @@ for {set i 0} {$i < $N2} {incr i} {
 
   $ns initial_node_pos $sinkNodes($i) 10
   $ns at $stopTime "$sinkNodes($i) reset"
+  $sinkNodes($i) random-motion 1
+  $ns at 0.0 "$sinkNodes($i) setdest [expr rand() * $bottleNeckXOffset + $bottleNeckXOffset + ($B - 1) * $bottleNeckGap] [expr [rand] * $Y] [expr 1 + [rand] * $speed]"
+  for {set j 0} {$j < 10} {incr j} {
+      $ns at [ expr $stopTime /  (10-$j) ] "$sinkNodes($i) setdest [expr rand() * $bottleNeckXOffset + $bottleNeckXOffset + ($B - 1) * $bottleNeckGap] [expr [rand] * $Y] [expr 1 + [rand] * $speed]"        
+  }
 
-  # set sinkNodes($i) [$ns node]
-  # set offset [expr ($N1 - $N2) / 2. * $yGap  ]
-  # $sinkNodes($i) set X_ [expr ($B + 1) * $xGap]
-  # $sinkNodes($i) set Y_ [expr $i * $yGap + $offset ]
-  # $sinkNodes($i) set Z_ 0.0
-  # $ns initial_node_pos $sinkNodes($i) 10
-
-  # $sinkNodes($i) random-motion 1
-  # $ns at 0.0 "$sinkNodes($i) setdest [expr rand() * $bottleNeckXOffset + $bottleNeckXOffset + ($B - 1) * $bottleNeckGap] [expr [rand] * $Y] [expr 1 + [rand] * 10]"
-  # $ns at [ expr $stopTime ] "$sinkNodes($i) setdest [expr rand() * $bottleNeckXOffset + $bottleNeckXOffset + ($B - 1) * $bottleNeckGap] [expr [rand] * $Y] [expr 1 + [rand] * 10]"
 
 }
 #  for {set j 0} {$j < $opt(n2)} {incr j} {
@@ -243,7 +250,7 @@ proc stop {} {
     # exec nam offline.nam
 }
 
-$ns at [expr $stopTime + 150] "stop"
+$ns at [expr $stopTime + .01] "stop"
 $ns run
 # setup TCP connections
 # set tcp1 [new Agent/TCP]

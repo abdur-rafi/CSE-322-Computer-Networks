@@ -34,7 +34,7 @@ set namTraceFile [open $namTraceFile w]
 $ns trace-all $traceFile
 $ns namtrace-all $namTraceFile 
 
-expr { srand(19) }
+# expr { srand(19) }
 for {set i 0} {$i < $B} {incr i} {
     set bottleNeckNodes($i) [$ns node]
     $ns at  [expr $stopTime + $delta] "$bottleNeckNodes($i) reset"

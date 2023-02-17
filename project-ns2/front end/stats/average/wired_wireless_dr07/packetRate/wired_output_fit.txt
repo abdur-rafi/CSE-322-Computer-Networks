@@ -1,0 +1,21 @@
+num_nodes is set 42
+channel.cc:sendUp - Calc highestAntennaZ_ asdf and distCST_
+highestAntennaZ_ = 1.5,  distCST_ = 550.0
+N: 17 r:0.112500 q:0.000000 alpha:0.900000 t_rtt:205 t_rtt_min:205 srtt:1640 avgwnd:2.000000 avgRtt:205.000000
+N: 17 r:0.210938 q:0.103211 alpha:0.900000 t_rtt:224 t_rtt_min:212 srtt:1745 avgwnd:3.750000 avgRtt:218.000000
+N: 17 r:0.093750 q:0.000000 alpha:0.900000 t_rtt:212 t_rtt_min:212 srtt:1696 avgwnd:1.666667 avgRtt:212.000000
+N: 17 r:0.137500 q:0.005568 alpha:0.900000 t_rtt:219 t_rtt_min:219 srtt:1759 avgwnd:2.444444 avgRtt:219.500000
+N: 17 r:0.305707 q:0.040060 alpha:0.900000 t_rtt:202 t_rtt_min:202 srtt:1644 avgwnd:5.434783 avgRtt:203.500000
+N: 17 r:0.098437 q:0.000000 alpha:0.900000 t_rtt:219 t_rtt_min:219 srtt:1752 avgwnd:1.750000 avgRtt:219.000000
+N: 15 r:0.632839 q:0.926628 alpha:0.900000 t_rtt:295 t_rtt_min:205 srtt:1737 avgwnd:11.250476 avgRtt:223.400000
+N: 15 r:0.270046 q:0.622077 alpha:0.900000 t_rtt:290 t_rtt_min:206 srtt:1739 avgwnd:4.800812 avgRtt:236.666667
+N: 17 r:0.205313 q:0.046645 alpha:0.900000 t_rtt:207 t_rtt_min:206 srtt:1692 avgwnd:3.650000 avgRtt:208.666667
+N: 15 r:0.522045 q:1.605380 alpha:0.900000 t_rtt:276 t_rtt_min:202 srtt:1774 avgwnd:9.280807 avgRtt:244.250000
+N: 15 r:0.306014 q:1.431980 alpha:0.900000 t_rtt:360 t_rtt_min:209 srtt:1887 avgwnd:5.440245 avgRtt:283.666667
+N: 15 r:0.272017 q:0.758696 alpha:0.900000 t_rtt:309 t_rtt_min:206 srtt:1762 avgwnd:4.835862 avgRtt:244.333333
+N: 15 r:0.450625 q:1.187036 alpha:0.900000 t_rtt:309 t_rtt_min:206 srtt:1847 avgwnd:8.011111 avgRtt:241.833333
+N: 15 r:0.250096 q:0.767179 alpha:0.900000 t_rtt:299 t_rtt_min:211 srtt:1776 avgwnd:4.446154 avgRtt:255.000000
+N: 15 r:0.281664 q:0.657746 alpha:0.900000 t_rtt:225 t_rtt_min:205 srtt:1766 avgwnd:5.007358 avgRtt:236.000000
+N: 15 r:0.327673 q:0.729411 alpha:0.900000 t_rtt:241 t_rtt_min:204 srtt:1755 avgwnd:5.825295 avgRtt:233.200000
+N: 14 r:0.288049 q:0.622077 alpha:0.900000 t_rtt:290 t_rtt_min:206 srtt:1739 avgwnd:4.800812 avgRtt:236.666667
+N: 15 r:0.340473 q:1.062178 alpha:0.900000 t_rtt:262 t_rtt_min:213 srtt:1907 avgwnd:6.052854 avgRtt:258.333333

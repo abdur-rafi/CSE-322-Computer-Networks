@@ -20,11 +20,17 @@ int main(){
     int packetSize, src, dest, from , to;
     string event, tFlag;
     string trafficSrc = "exp";
+    map<int,double> startEnergy, endEnergy;
+    // for(int i = 0; i < 1000; ++i) startEnergy[i] = endEnergy[i] = -1;
+    int nodeId;
+    double e;
     while(getline(&buffer,&sz,stdin) != -1){
         i = 0;
         f = false;
         event = "";
         tFlag = "";
+        nodeId = -1;
+        e = -1;
         while(*(buffer + i) && !isspace(buffer[i])){
             event += buffer[i++];
         }
@@ -122,6 +128,11 @@ int main(){
                         packetSize = atoi(cumm.c_str());
                     else if(prev == "-It")
                         packetType = cumm;
+                    else if(prev == "-Ni" || prev == "-n")
+                        nodeId = atoi(cumm.c_str());
+                    else if(prev == "-Ne" || prev == "-e"){
+                        e = atof(cumm.c_str());
+                    }
                     prev = cumm;
                     cumm = "";
                     ++i;
@@ -132,10 +143,18 @@ int main(){
             }
         }
         // printf("%s", packetType.c_str());
+
         if(f && startTime > time)
             startTime = time;
         if(f && endTime < time)
             endTime = time;
+        // printf("%d %lf\n", nodeId,e);
+        if(nodeId != -1 && e != -1){
+            if(startEnergy.find(nodeId) == startEnergy.end()){
+                startEnergy[nodeId] = e;
+            }
+            endEnergy[nodeId] = e;
+        }
         if(event == "d" && packetType == trafficSrc){
             droppedPackets++;
         }
@@ -151,10 +170,17 @@ int main(){
             sentPackets += 1;
         }
     }
+    double energyConsumption = 0;
+    for(auto v : startEnergy){
+        // printf("%lf %lf\n", v.second, endEnergy[v.first]);
+        energyConsumption += v.second - endEnergy[v.first];
+    }
+    // for(int i = 0; i < 1000; ++i)
+    //     energyConsumption += startEnergy[i] - endEnergy[i];
     // printf("start time : %lf end time: %lf repackets: %lld sPackets:%lld\n", startTime, endTime,receivedPackets, sentPackets);
     // printf("%llu\n", receivedPackets);
-    printf("%lf %lf %lf %lf \n", receivedBytes * 8. / (endTime - startTime),
+    printf("%lf %lf %lf %lf %lf\n", receivedBytes * 8. / (endTime - startTime),
     (totalDelay / receivedPackets), receivedPackets * 1. / sentPackets, 
-    droppedPackets * 1. / sentPackets);
+    droppedPackets * 1. / sentPackets, energyConsumption / receivedPackets);
     // printf("done");
 }

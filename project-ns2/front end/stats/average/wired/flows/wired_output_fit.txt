@@ -1,0 +1,15 @@
+N: 17 r:0.112500 q:0.000000 alpha:0.900000 t_rtt:204 t_rtt_min:204 srtt:1632 avgwnd:2.000000 avgRtt:204.000000
+N: 17 r:0.112500 q:0.000000 alpha:0.900000 t_rtt:204 t_rtt_min:204 srtt:1632 avgwnd:2.000000 avgRtt:204.000000
+N: 17 r:0.112500 q:0.000000 alpha:0.900000 t_rtt:204 t_rtt_min:204 srtt:1632 avgwnd:2.000000 avgRtt:204.000000
+N: 17 r:0.152679 q:0.000000 alpha:0.900000 t_rtt:204 t_rtt_min:204 srtt:1632 avgwnd:2.714286 avgRtt:204.000000
+N: 17 r:1.297791 q:0.000000 alpha:0.900000 t_rtt:204 t_rtt_min:204 srtt:1632 avgwnd:23.071843 avgRtt:204.000000
+N: 17 r:0.731277 q:0.000000 alpha:0.900000 t_rtt:204 t_rtt_min:204 srtt:1632 avgwnd:13.000484 avgRtt:204.000000
+N: 17 r:0.445756 q:0.000000 alpha:0.900000 t_rtt:204 t_rtt_min:204 srtt:1632 avgwnd:7.924545 avgRtt:204.000000
+N: 17 r:0.542051 q:0.000000 alpha:0.900000 t_rtt:204 t_rtt_min:204 srtt:1632 avgwnd:9.636469 avgRtt:204.000000
+N: 17 r:0.436957 q:0.000000 alpha:0.900000 t_rtt:204 t_rtt_min:204 srtt:1632 avgwnd:7.768123 avgRtt:204.000000
+N: 17 r:0.560096 q:0.000000 alpha:0.900000 t_rtt:204 t_rtt_min:204 srtt:1632 avgwnd:9.957260 avgRtt:204.000000
+N: 18 r:1.446840 q:0.000000 alpha:0.900000 t_rtt:204 t_rtt_min:204 srtt:1632 avgwnd:27.329197 avgRtt:204.000000
+N: 18 r:0.423075 q:0.000000 alpha:0.900000 t_rtt:204 t_rtt_min:204 srtt:1632 avgwnd:7.991416 avgRtt:204.000000
+N: 17 r:0.464025 q:0.000000 alpha:0.900000 t_rtt:204 t_rtt_min:204 srtt:1632 avgwnd:8.249338 avgRtt:204.000000
+N: 17 r:0.199671 q:0.000000 alpha:0.900000 t_rtt:204 t_rtt_min:204 srtt:1632 avgwnd:3.549706 avgRtt:204.000000
+N: 17 r:0.573791 q:0.000000 alpha:0.900000 t_rtt:204 t_rtt_min:204 srtt:1632 avgwnd:10.200734 avgRtt:204.000000

@@ -1,0 +1,44 @@
+num_nodes is set 42
+channel.cc:sendUp - Calc highestAntennaZ_ asdf and distCST_
+highestAntennaZ_ = 1.5,  distCST_ = 550.0
+N: 39 r:0.087500 q:2.857143 alpha:0.700000 t_rtt:5 t_rtt_min:1 srtt:12 avgwnd:5.000000 avgRtt:2.333333
+N: 38 r:0.574028 q:30.473002 alpha:0.700000 t_rtt:56 t_rtt_min:1 srtt:104 avgwnd:31.981567 avgRtt:21.200000
+N: 39 r:0.213580 q:7.322727 alpha:0.700000 t_rtt:8 t_rtt_min:2 srtt:22 avgwnd:12.204545 avgRtt:5.000000
+N: 41 r:0.026250 q:0.000000 alpha:0.700000 t_rtt:13 t_rtt_min:13 srtt:104 avgwnd:1.500000 avgRtt:13.000000
+N: 41 r:0.023333 q:0.000000 alpha:0.700000 t_rtt:39 t_rtt_min:39 srtt:312 avgwnd:1.333333 avgRtt:39.000000
+N: 37 r:0.531236 q:27.478202 alpha:0.700000 t_rtt:56 t_rtt_min:1 srtt:104 avgwnd:28.838509 avgRtt:21.200000
+N: 38 r:0.296732 q:9.919329 alpha:0.700000 t_rtt:8 t_rtt_min:2 srtt:22 avgwnd:16.532215 avgRtt:5.000000
+N: 42 r:0.117378 q:0.000000 alpha:0.700000 t_rtt:13 t_rtt_min:13 srtt:104 avgwnd:6.875000 avgRtt:13.000000
+N: 37 r:0.304541 q:9.919329 alpha:0.700000 t_rtt:8 t_rtt_min:2 srtt:22 avgwnd:16.532215 avgRtt:5.000000
+N: 43 r:0.114583 q:0.000000 alpha:0.700000 t_rtt:13 t_rtt_min:13 srtt:104 avgwnd:6.875000 avgRtt:13.000000
+N: 36 r:0.282373 q:8.955260 alpha:0.700000 t_rtt:8 t_rtt_min:2 srtt:0 avgwnd:14.925434 avgRtt:5.000000
+N: 42 r:0.145122 q:0.000000 alpha:0.700000 t_rtt:39 t_rtt_min:39 srtt:312 avgwnd:8.500000 avgRtt:39.000000
+N: 39 r:0.442333 q:20.361352 alpha:0.700000 t_rtt:35 t_rtt_min:7 srtt:446 avgwnd:25.276162 avgRtt:36.000000
+N: 39 r:0.522681 q:21.721811 alpha:0.700000 t_rtt:8 t_rtt_min:8 srtt:204 avgwnd:29.867490 avgRtt:29.333333
+N: 39 r:0.426525 q:2.626383 alpha:0.700000 t_rtt:84 t_rtt_min:69 srtt:629 avgwnd:24.372833 avgRtt:77.333333
+N: 44 r:0.111919 q:0.000000 alpha:0.700000 t_rtt:13 t_rtt_min:13 srtt:0 avgwnd:6.875000 avgRtt:13.000000
+N: 39 r:0.588391 q:32.136297 alpha:0.700000 t_rtt:135 t_rtt_min:4 srtt:870 avgwnd:33.622368 avgRtt:90.500000
+N: 35 r:0.231671 q:7.148717 alpha:0.700000 t_rtt:8 t_rtt_min:2 srtt:0 avgwnd:11.914529 avgRtt:5.000000
+N: 36 r:0.497831 q:25.072688 alpha:0.700000 t_rtt:56 t_rtt_min:1 srtt:104 avgwnd:26.313910 avgRtt:21.200000
+N: 43 r:0.141667 q:0.000000 alpha:0.700000 t_rtt:39 t_rtt_min:39 srtt:312 avgwnd:8.500000 avgRtt:39.000000
+N: 38 r:0.407312 q:16.504052 alpha:0.700000 t_rtt:8 t_rtt_min:8 srtt:204 avgwnd:22.693071 avgRtt:29.333333
+N: 39 r:0.190521 q:5.874614 alpha:0.700000 t_rtt:102 t_rtt_min:31 srtt:353 avgwnd:10.886899 avgRtt:67.333333
+N: 38 r:0.211606 q:1.270419 alpha:0.700000 t_rtt:84 t_rtt_min:69 srtt:629 avgwnd:11.789484 avgRtt:77.333333
+N: 39 r:0.210495 q:9.995317 alpha:0.700000 t_rtt:20 t_rtt_min:20 srtt:1841 avgwnd:12.028263 avgRtt:118.333333
+N: 37 r:0.418030 q:16.504052 alpha:0.700000 t_rtt:8 t_rtt_min:8 srtt:204 avgwnd:22.693071 avgRtt:29.333333
+N: 35 r:0.511659 q:25.072688 alpha:0.700000 t_rtt:56 t_rtt_min:1 srtt:0 avgwnd:26.313910 avgRtt:21.200000
+N: 39 r:0.213580 q:3.919708 alpha:0.700000 t_rtt:186 t_rtt_min:186 srtt:2720 avgwnd:12.204545 avgRtt:274.000000
+N: 45 r:0.170492 q:0.000000 alpha:0.700000 t_rtt:13 t_rtt_min:13 srtt:0 avgwnd:10.716667 avgRtt:13.000000
+N: 38 r:0.295246 q:12.184771 alpha:0.700000 t_rtt:14 t_rtt_min:14 srtt:323 avgwnd:16.449441 avgRtt:54.000000
+N: 38 r:0.287996 q:15.155824 alpha:0.700000 t_rtt:397 t_rtt_min:7 srtt:788 avgwnd:16.045474 avgRtt:126.250000
+N: 37 r:0.262994 q:5.280460 alpha:0.700000 t_rtt:206 t_rtt_min:69 srtt:757 avgwnd:14.276798 avgRtt:109.500000
+N: 41 r:0.026250 q:0.000000 alpha:0.700000 t_rtt:485 t_rtt_min:485 srtt:3880 avgwnd:1.500000 avgRtt:485.000000
+N: 39 r:0.391498 q:20.453772 alpha:0.700000 t_rtt:4 t_rtt_min:1 srtt:189 avgwnd:22.371314 avgRtt:11.666667
+N: 36 r:0.320918 q:12.336601 alpha:0.700000 t_rtt:8 t_rtt_min:8 srtt:0 avgwnd:16.962826 avgRtt:29.333333
+N: 37 r:0.282347 q:10.682735 alpha:0.700000 t_rtt:15 t_rtt_min:14 srtt:298 avgwnd:15.327402 avgRtt:46.200000
+N: 38 r:0.257980 q:13.977128 alpha:0.700000 t_rtt:147 t_rtt_min:4 srtt:1131 avgwnd:14.373174 avgRtt:145.166667
+N: 38 r:0.245085 q:12.484310 alpha:0.700000 t_rtt:4 t_rtt_min:1 srtt:189 avgwnd:13.654714 avgRtt:11.666667
+N: 36 r:0.278565 q:10.262282 alpha:0.700000 t_rtt:15 t_rtt_min:14 srtt:298 avgwnd:14.724143 avgRtt:46.200000
+N: 41 r:0.026250 q:0.000000 alpha:0.700000 t_rtt:47 t_rtt_min:47 srtt:376 avgwnd:1.500000 avgRtt:47.000000
+N: 35 r:0.298591 q:10.593786 alpha:0.700000 t_rtt:21 t_rtt_min:14 srtt:306 avgwnd:15.356130 avgRtt:45.142857
+N: 34 r:0.526278 q:25.072688 alpha:0.700000 t_rtt:56 t_rtt_min:1 srtt:0 avgwnd:26.313910 avgRtt:21.200000

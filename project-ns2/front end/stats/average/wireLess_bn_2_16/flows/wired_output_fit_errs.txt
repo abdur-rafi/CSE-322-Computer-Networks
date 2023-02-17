@@ -1,0 +1,182 @@
+INITIALIZE THE LIST xListHead
+warning: no class variable Agent/TCP/FitW::N
+
+	see tcl-object.tcl in tclcl for info about this warning.
+
+warning: no class variable Agent/TCP/FitW::alpha
+
+warning: no class variable Agent/TCP/FitW::N
+
+	see tcl-object.tcl in tclcl for info about this warning.
+
+warning: no class variable Agent/TCP/FitW::alpha
+
+warning: no class variable Agent/TCP/FitW::N
+
+	see tcl-object.tcl in tclcl for info about this warning.
+
+warning: no class variable Agent/TCP/FitW::alpha
+
+warning: no class variable Agent/TCP/FitW::N
+
+	see tcl-object.tcl in tclcl for info about this warning.
+
+warning: no class variable Agent/TCP/FitW::alpha
+
+warning: no class variable Agent/TCP/FitW::N
+
+	see tcl-object.tcl in tclcl for info about this warning.
+
+warning: no class variable Agent/TCP/FitW::alpha
+
+warning: no class variable Agent/TCP/FitW::N
+
+	see tcl-object.tcl in tclcl for info about this warning.
+
+warning: no class variable Agent/TCP/FitW::alpha
+
+warning: no class variable Agent/TCP/FitW::N
+
+	see tcl-object.tcl in tclcl for info about this warning.
+
+warning: no class variable Agent/TCP/FitW::alpha
+
+warning: no class variable Agent/TCP/FitW::N
+
+	see tcl-object.tcl in tclcl for info about this warning.
+
+warning: no class variable Agent/TCP/FitW::alpha
+
+warning: no class variable Agent/TCP/FitW::N
+
+	see tcl-object.tcl in tclcl for info about this warning.
+
+warning: no class variable Agent/TCP/FitW::alpha
+
+warning: no class variable Agent/TCP/FitW::N
+
+	see tcl-object.tcl in tclcl for info about this warning.
+
+warning: no class variable Agent/TCP/FitW::alpha
+
+warning: no class variable Agent/TCP/FitW::N
+
+	see tcl-object.tcl in tclcl for info about this warning.
+
+warning: no class variable Agent/TCP/FitW::alpha
+
+warning: no class variable Agent/TCP/FitW::N
+
+	see tcl-object.tcl in tclcl for info about this warning.
+
+warning: no class variable Agent/TCP/FitW::alpha
+
+warning: no class variable Agent/TCP/FitW::N
+
+	see tcl-object.tcl in tclcl for info about this warning.
+
+warning: no class variable Agent/TCP/FitW::alpha
+
+warning: no class variable Agent/TCP/FitW::N
+
+	see tcl-object.tcl in tclcl for info about this warning.
+
+warning: no class variable Agent/TCP/FitW::alpha
+
+warning: no class variable Agent/TCP/FitW::N
+
+	see tcl-object.tcl in tclcl for info about this warning.
+
+warning: no class variable Agent/TCP/FitW::alpha
+
+warning: no class variable Agent/TCP/FitW::N
+
+	see tcl-object.tcl in tclcl for info about this warning.
+
+warning: no class variable Agent/TCP/FitW::alpha
+
+warning: no class variable Agent/TCP/FitW::N
+
+	see tcl-object.tcl in tclcl for info about this warning.
+
+warning: no class variable Agent/TCP/FitW::alpha
+
+warning: no class variable Agent/TCP/FitW::N
+
+	see tcl-object.tcl in tclcl for info about this warning.
+
+warning: no class variable Agent/TCP/FitW::alpha
+
+warning: no class variable Agent/TCP/FitW::N
+
+	see tcl-object.tcl in tclcl for info about this warning.
+
+warning: no class variable Agent/TCP/FitW::alpha
+
+warning: no class variable Agent/TCP/FitW::N
+
+	see tcl-object.tcl in tclcl for info about this warning.
+
+warning: no class variable Agent/TCP/FitW::alpha
+
+warning: no class variable Agent/TCP/FitW::N
+
+	see tcl-object.tcl in tclcl for info about this warning.
+
+warning: no class variable Agent/TCP/FitW::alpha
+
+warning: no class variable Agent/TCP/FitW::N
+
+	see tcl-object.tcl in tclcl for info about this warning.
+
+warning: no class variable Agent/TCP/FitW::alpha
+
+warning: no class variable Agent/TCP/FitW::N
+
+	see tcl-object.tcl in tclcl for info about this warning.
+
+warning: no class variable Agent/TCP/FitW::alpha
+
+warning: no class variable Agent/TCP/FitW::N
+
+	see tcl-object.tcl in tclcl for info about this warning.
+
+warning: no class variable Agent/TCP/FitW::alpha
+
+warning: no class variable Agent/TCP/FitW::N
+
+	see tcl-object.tcl in tclcl for info about this warning.
+
+warning: no class variable Agent/TCP/FitW::alpha
+
+warning: no class variable Agent/TCP/FitW::N
+
+	see tcl-object.tcl in tclcl for info about this warning.
+
+warning: no class variable Agent/TCP/FitW::alpha
+
+warning: no class variable Agent/TCP/FitW::N
+
+	see tcl-object.tcl in tclcl for info about this warning.
+
+warning: no class variable Agent/TCP/FitW::alpha
+
+warning: no class variable Agent/TCP/FitW::N
+
+	see tcl-object.tcl in tclcl for info about this warning.
+
+warning: no class variable Agent/TCP/FitW::alpha
+
+warning: no class variable Agent/TCP/FitW::N
+
+	see tcl-object.tcl in tclcl for info about this warning.
+
+warning: no class variable Agent/TCP/FitW::alpha
+
+warning: no class variable Agent/TCP/FitW::N
+
+	see tcl-object.tcl in tclcl for info about this warning.
+
+warning: no class variable Agent/TCP/FitW::alpha
+
+SORTING LISTS ...DONE!

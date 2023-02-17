@@ -12,14 +12,16 @@ set bandwidth [lindex $argv 8]
 set dropRate [lindex $argv 9]
 set traceFile [lindex $argv 10]
 set namTraceFile [lindex $argv 11]
+set speed [lindex $argv 12]
 
-set stopTime 40
+set stopTime 50
 set delay 0
 set startTime 10
 set radius 100
-set bottleNeckXOffset 300
-set bottleNeckYOffset 300
-set bottleNeckGap 250
+set bottleNeckXOffset 200
+set bottleNeckYOffset 200
+set bottleNeckGap 150
+
 set Y [expr 2 * $radius + 10]
 
 set ns [new Simulator]
@@ -38,15 +40,20 @@ $topo load_flatgrid $X $Y
 create-god [expr $N1 + $N2 + $B]
 
 set channel [new Channel/WirelessChannel]
-expr { srand(19) }
-
+# expr { srand(19) }
 # LL set delay_ 100ms
-
-$ns node-config -adhocRouting DSDV \
+# 84245.901732 5.228097 0.830036 0.134892 0.891963
+$ns node-config -adhocRouting DSR \
     -llType LL \
     -macType Mac/802_11 \
-    -ifqType Queue/DropTail \
+    -ifqType CMUPriQueue \
     -ifqLen 50 \
+    -energyModel "EnergyModel" \
+    -initialEnergy 100.0 \
+    -txPower .4 \
+    -rxPower .3 \
+    -idlePower 0.1 \
+    -sleepPower .01 \
     -antType Antenna/OmniAntenna \
     -propType Propagation/TwoRayGround \
     -phyType Phy/WirelessPhy \
@@ -55,7 +62,7 @@ $ns node-config -adhocRouting DSDV \
     -agentTrace ON \
     -routerTrace ON \
     -macTrace OFF \
-    -movementTrace OFF		
+    -movementTrace OFF \		
 
 proc UniformErr {} {
     global dropRate
@@ -64,7 +71,7 @@ proc UniformErr {} {
 }
 
 
-$ns node-config -IncomingErrProc UniformErr  \
+# $ns node-config -IncomingErrProc UniformErr  \
 
 
 set angleOffset .3
@@ -82,9 +89,11 @@ for {set i 0} {$i < $N1} {incr i} {
     $ns at [expr $stopTime + $delay] "$srcNodes($i) reset"
     # random movement
     
-    # $srcNodes($i) random-motion 1
-    # $ns at 0.0 "$srcNodes($i) setdest [expr [rand] * $bottleNeckXOffset] [expr [rand] * $Y] [expr 1 + [rand] * 10]"
-    # $ns at [ expr $stopTime ] "$srcNodes($i) setdest [expr [rand] * $bottleNeckXOffset] [expr [rand] * $Y] [expr 1 + [rand] * 10]"
+    $srcNodes($i) random-motion 1
+    $ns at 0.0 "$srcNodes($i) setdest [expr [rand] * $bottleNeckXOffset] [expr [rand] * $Y] [expr 1 + [rand] * $speed]"
+    for {set j 0} {$j < 10} {incr j} {
+        $ns at [ expr $stopTime / (10 - $j) ] "$srcNodes($i) setdest [expr [rand] * $bottleNeckXOffset] [expr [rand] * $Y] [expr 1 + [rand] * $speed]"        
+    }
 
 }
 
@@ -106,13 +115,15 @@ for {set i 0} {$i < $N2} {incr i} {
     # $sinkNodes($i) set Z_ 0.0
     # $ns initial_node_pos $sinkNodes($i) 10
 
-    # $sinkNodes($i) random-motion 1
-    # $ns at 0.0 "$sinkNodes($i) setdest [expr rand() * $bottleNeckXOffset + $bottleNeckXOffset + ($B - 1) * $bottleNeckGap] [expr [rand] * $Y] [expr 1 + [rand] * 10]"
-    # $ns at [ expr $stopTime ] "$sinkNodes($i) setdest [expr rand() * $bottleNeckXOffset + $bottleNeckXOffset + ($B - 1) * $bottleNeckGap] [expr [rand] * $Y] [expr 1 + [rand] * 10]"
+    $sinkNodes($i) random-motion 1
+    $ns at 0.0 "$sinkNodes($i) setdest [expr rand() * $bottleNeckXOffset + $bottleNeckXOffset + ($B - 1) * $bottleNeckGap] [expr [rand] * $Y] [expr 1 + [rand] * $speed]"
+    for {set j 0} {$j < 10} {incr j} {
+        $ns at [ expr $stopTime /  (10-$j) ] "$sinkNodes($i) setdest [expr rand() * $bottleNeckXOffset + $bottleNeckXOffset + ($B - 1) * $bottleNeckGap] [expr [rand] * $Y] [expr 1 + [rand] * $speed]"        
+    }
 
 }
-
-
+# LL set delay_ 200ms
+# $ns node-config -IncomingErrProc UniformErr  \
 
 for {set i 0} {$i < $B} {incr i} {
     set bottleNeckNodes($i) [$ns node]
@@ -173,7 +184,7 @@ proc stop {} {
     # exec nam offline.nam
 }
 
-$ns at [expr $stopTime + 150] "stop"
+$ns at [expr $stopTime + 100] "stop"
 $ns run
 
 
