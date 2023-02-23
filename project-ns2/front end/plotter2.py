@@ -7,7 +7,9 @@ save_dir = sys.argv[7]
 
 def plot(figsize,x,y,label,xLabel, yLabel,saveFile):
     plt.figure(figsize=figsize)
-    plt.plot(x,y, marker = 'o', linestyle = '--', color = 'blue',label = label)
+    plt.plot(x,y[0], marker = 'o', linestyle = '--', color = 'blue',label = "tcp")
+    plt.plot(x,y[1], marker = 'x', linestyle = '--', color = 'red',label="fit")
+
     plt.xlabel(xLabel)
     plt.ylabel(yLabel)
     plt.legend()
@@ -18,18 +20,18 @@ def plot(figsize,x,y,label,xLabel, yLabel,saveFile):
 
 
     
-throughput = []
-delay = []
-deliveryRatio = []
-dropRatio = []
-
-for i in range(5):
-    line = input()
-    words = line.split(" ")
-    throughput.append(float(words[0]) / 1000)
-    delay.append(float(words[1]))
-    deliveryRatio.append(float(words[2]))
-    dropRatio.append(float(words[3]))
+throughput = [[], []]
+delay = [[], []]
+deliveryRatio = [[], []]
+dropRatio = [[], []]
+for j in range(2):
+    for i in range(5):
+        line = input()
+        words = line.split(" ")
+        throughput[j].append(float(words[0]) / 1000)
+        delay[j].append(float(words[1]))
+        deliveryRatio[j].append(float(words[2]))
+        dropRatio[j].append(float(words[3]))
     
 
 

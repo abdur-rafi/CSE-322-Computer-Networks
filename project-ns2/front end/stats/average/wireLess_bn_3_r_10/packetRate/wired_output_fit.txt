@@ -1,0 +1,37 @@
+num_nodes is set 43
+channel.cc:sendUp - Calc highestAntennaZ_ asdf and distCST_
+highestAntennaZ_ = 1.5,  distCST_ = 550.0
+N: 9 r:0.175000 q:0.000000 alpha:0.700000 t_rtt:184 t_rtt_min:184 srtt:1472 avgwnd:2.000000 avgRtt:184.000000
+N: 9 r:0.175000 q:0.000000 alpha:0.700000 t_rtt:186 t_rtt_min:186 srtt:1488 avgwnd:2.000000 avgRtt:186.000000
+N: 7 r:0.218750 q:0.943775 alpha:0.700000 t_rtt:343 t_rtt_min:155 srtt:1428 avgwnd:2.500000 avgRtt:249.000000
+N: 7 r:0.406125 q:3.695121 alpha:0.700000 t_rtt:14 t_rtt_min:14 srtt:1070 avgwnd:4.641432 avgRtt:68.666667
+N: 7 r:0.320833 q:2.729809 alpha:0.700000 t_rtt:29 t_rtt_min:29 srtt:1415 avgwnd:3.666667 avgRtt:113.500000
+N: 7 r:0.218750 q:1.106557 alpha:0.700000 t_rtt:440 t_rtt_min:170 srtt:1630 avgwnd:2.500000 avgRtt:305.000000
+N: 9 r:0.545723 q:0.000000 alpha:0.700000 t_rtt:44 t_rtt_min:44 srtt:352 avgwnd:6.236831 avgRtt:44.000000
+N: 7 r:0.332500 q:1.431539 alpha:0.700000 t_rtt:297 t_rtt_min:166 srtt:1608 avgwnd:3.800000 avgRtt:266.333333
+N: 9 r:0.131250 q:0.000000 alpha:0.700000 t_rtt:159 t_rtt_min:159 srtt:1272 avgwnd:1.500000 avgRtt:159.000000
+N: 7 r:0.306250 q:1.517978 alpha:0.700000 t_rtt:416 t_rtt_min:168 srtt:1713 avgwnd:3.500000 avgRtt:296.666667
+N: 9 r:0.116667 q:0.000000 alpha:0.700000 t_rtt:174 t_rtt_min:174 srtt:1392 avgwnd:1.333333 avgRtt:174.000000
+N: 10 r:0.485087 q:0.000000 alpha:0.700000 t_rtt:44 t_rtt_min:44 srtt:352 avgwnd:6.236831 avgRtt:44.000000
+N: 9 r:0.131250 q:0.000000 alpha:0.700000 t_rtt:185 t_rtt_min:185 srtt:1480 avgwnd:1.500000 avgRtt:185.000000
+N: 7 r:0.303333 q:0.526516 alpha:0.700000 t_rtt:383 t_rtt_min:282 srtt:2357 avgwnd:3.466667 avgRtt:332.500000
+N: 10 r:0.155556 q:0.000000 alpha:0.700000 t_rtt:186 t_rtt_min:186 srtt:1488 avgwnd:2.000000 avgRtt:186.000000
+N: 10 r:0.155556 q:0.000000 alpha:0.700000 t_rtt:184 t_rtt_min:184 srtt:1472 avgwnd:2.000000 avgRtt:184.000000
+N: 11 r:0.436578 q:0.000000 alpha:0.700000 t_rtt:44 t_rtt_min:44 srtt:352 avgwnd:6.236831 avgRtt:44.000000
+N: 9 r:0.116667 q:0.000000 alpha:0.700000 t_rtt:486 t_rtt_min:486 srtt:3888 avgwnd:1.333333 avgRtt:486.000000
+N: 9 r:0.262500 q:0.000000 alpha:0.700000 t_rtt:257 t_rtt_min:257 srtt:2056 avgwnd:3.000000 avgRtt:257.000000
+N: 6 r:0.240000 q:0.904130 alpha:0.700000 t_rtt:297 t_rtt_min:166 srtt:1608 avgwnd:2.400000 avgRtt:266.333333
+N: 10 r:0.103704 q:0.000000 alpha:0.700000 t_rtt:174 t_rtt_min:174 srtt:1392 avgwnd:1.333333 avgRtt:174.000000
+N: 7 r:0.993045 q:6.880627 alpha:0.700000 t_rtt:396 t_rtt_min:113 srtt:2585 avgwnd:11.349081 avgRtt:287.000000
+N: 6 r:0.484510 q:1.705328 alpha:0.700000 t_rtt:177 t_rtt_min:170 srtt:1604 avgwnd:4.845102 avgRtt:262.333333
+N: 6 r:0.399153 q:3.177725 alpha:0.700000 t_rtt:14 t_rtt_min:14 srtt:1070 avgwnd:3.991533 avgRtt:68.666667
+N: 6 r:0.608717 q:3.110559 alpha:0.700000 t_rtt:118 t_rtt_min:100 srtt:1445 avgwnd:6.087171 avgRtt:204.500000
+N: 7 r:0.589556 q:0.891321 alpha:0.700000 t_rtt:505 t_rtt_min:387 srtt:3214 avgwnd:6.737785 avgRtt:446.000000
+N: 6 r:0.480419 q:2.515311 alpha:0.700000 t_rtt:478 t_rtt_min:155 srtt:1728 avgwnd:4.804194 avgRtt:325.333333
+N: 6 r:0.283333 q:2.109398 alpha:0.700000 t_rtt:29 t_rtt_min:29 srtt:1415 avgwnd:2.833333 avgRtt:113.500000
+N: 10 r:0.124444 q:0.000000 alpha:0.700000 t_rtt:159 t_rtt_min:159 srtt:1272 avgwnd:1.600000 avgRtt:159.000000
+N: 12 r:0.396889 q:0.000000 alpha:0.700000 t_rtt:44 t_rtt_min:44 srtt:0 avgwnd:6.236831 avgRtt:44.000000
+N: 7 r:0.684644 q:2.177461 alpha:0.700000 t_rtt:209 t_rtt_min:118 srtt:1035 avgwnd:7.824502 avgRtt:163.500000
+N: 9 r:0.304427 q:0.000000 alpha:0.700000 t_rtt:435 t_rtt_min:435 srtt:3480 avgwnd:3.479167 avgRtt:435.000000
+N: 10 r:0.124444 q:0.000000 alpha:0.700000 t_rtt:185 t_rtt_min:185 srtt:1480 avgwnd:1.600000 avgRtt:185.000000
+N: 9 r:0.368229 q:0.000000 alpha:0.700000 t_rtt:114 t_rtt_min:114 srtt:912 avgwnd:4.208333 avgRtt:114.000000

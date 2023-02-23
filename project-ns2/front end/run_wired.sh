@@ -64,29 +64,29 @@ oneIteration(){
 }
 
 
-echo "################################## nodes #######################################"
-root="$main/nodes"
-mkdir -p $root
->"$root/stats-tcp.txt"
->"$root/stats-fit.txt"
+# echo "################################## nodes #######################################"
+# root="$main/nodes"
+# mkdir -p $root
+# >"$root/stats-tcp.txt"
+# >"$root/stats-fit.txt"
 
 
-for n in  10 20 30 40 50
-do
-    oneIteration $n $f $bd $speed
-done
+# for n in  10 20 30 40 50
+# do
+#     oneIteration $n $f $bd $speed
+# done
 
-echo "################################## flows #######################################"
+# echo "################################## flows #######################################"
 
-root="$main/flows"
-mkdir -p $root
->"$root/stats-tcp.txt"
->"$root/stats-fit.txt"
+# root="$main/flows"
+# mkdir -p $root
+# >"$root/stats-tcp.txt"
+# >"$root/stats-fit.txt"
 
-for flows in 10 20 30 40 50
-do
-    oneIteration $nodes $flows $bd $speed
-done
+# for flows in 10 20 30 40 50
+# do
+#     oneIteration $nodes $flows $bd $speed
+# done
 
 
 
@@ -103,21 +103,21 @@ do
     oneIteration $nodes $f $prate $speed
 done
 
-if [[ $1 != 0 ]]; then
-    echo "################################### speed #####################################"
+# if [[ $1 != 0 ]]; then
+#     echo "################################### speed #####################################"
 
-    root="$main/speed"
-    mkdir -p $root
-    >"$root/stats-tcp.txt"
-    >"$root/stats-fit.txt"
+#     root="$main/speed"
+#     mkdir -p $root
+#     >"$root/stats-tcp.txt"
+#     >"$root/stats-fit.txt"
 
-    for s in  5 10 15 20 25
-    do
-        oneIteration $nodes $f $prate $s
-    done
+#     for s in  5 10 15 20 25
+#     do
+#         oneIteration $nodes $f $prate $s
+#     done
 
 
-fi
+# fi
 
 
 

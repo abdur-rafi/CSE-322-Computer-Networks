@@ -40,8 +40,12 @@ for {set i 0} {$i < $B} {incr i} {
     $ns at  [expr $stopTime + $delta] "$bottleNeckNodes($i) reset"
 }
 for {set i 1} {$i < $B} {incr i} {
+    set recvr_delay1 [new RandomVariable/Uniform]
+    $recvr_delay1 set min_ 5ms
+    $recvr_delay1 set max_ 25ms
+
     set loss_module($i) [new ErrorModel/Uniform $dropRate pkt ]
-    $ns duplex-link $bottleNeckNodes([expr $i - 1]) $bottleNeckNodes($i) 5Gb 1s DropTail
+    $ns duplex-link $bottleNeckNodes([expr $i - 1]) $bottleNeckNodes($i) 5Gb $recvr_delay1 DropTail
     $ns link-lossmodel $loss_module($i) $bottleNeckNodes([expr $i - 1]) $bottleNeckNodes($i) 
 }
 
@@ -95,7 +99,7 @@ proc stop {} {
     # exec nam offline.nam
 }
 
-$ns at [expr $stopTime + 150] "stop"
+$ns at [expr $stopTime + 10] "stop"
 $ns run
 
 
@@ -104,4 +108,3 @@ $ns run
 #     set nodes($i) [$ns node]
 #     $nodes($i) random-motion 1
 # }
-

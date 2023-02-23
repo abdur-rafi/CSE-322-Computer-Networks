@@ -7,7 +7,7 @@ f=40
 drRate=.05
 nodes=20
 area=5000
-repeat=20
+repeat=10
 speed=15
 if [[ $1 == 0 ]];then
     main="./stats/average/wired"
@@ -16,13 +16,14 @@ if [[ $1 == 0 ]];then
     namFile=namWired.nam
 elif [[ $1 == 1 ]]; then
 
-    main="./stats/average/wireLess_bn_4_25"
-    srcFile=wireless_rand.tcl
+    main="./stats/average/wireLess_bn_3_r_10"
+    srcFile=wireless.tcl
     trFile=traceWireless.tr
     namFile=namWireless.nam
-    bn=2
+    bn=3
     drRate=.07
-    area=800
+    area=1200
+    bd=10kb
 else
 
     main="./stats/average/wired_wireless_dr07"
@@ -113,7 +114,7 @@ if [[ $1 != 0 ]]; then
 
     for s in  5 10 15 20 25
     do
-        oneIteration $nodes $f $prate $s
+        oneIteration $nodes $f $bd $s
     done
 
 
@@ -142,3 +143,5 @@ fi
 # ns wireless.tcl 10 10 3 10 800 0 1 .5 10mb .05 test.tr test.nam 10
 # ns wired_wireless.tcl 10 10 2 10 1800 0 1 .5 10mb .05 test.tr test.nam 10
 # ns wireless.tcl 20 20 4 40 1000 0 1 .5 10mb .05 test.tr test.nam 10
+#  ns wireless.tcl 10 10 3 10 1200 0 1 .5 10mb .05 test.tr test.nam 10
+#  ns wireless.tcl 5 5 3 10 1200 0 1 .5 10mb .05 test.tr test.nam 10

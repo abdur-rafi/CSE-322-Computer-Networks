@@ -17,12 +17,12 @@ set speed [lindex $argv 12]
 set stopTime 50
 set delay 0
 set startTime 10
-set radius 100
-set bottleNeckXOffset 200
-set bottleNeckYOffset 200
-set bottleNeckGap 150
+set radius 250
+set bottleNeckXOffset 300
+set bottleNeckYOffset 300
+set bottleNeckGap 250
 
-set Y [expr 2 * $radius + 10]
+set Y [expr 2 * $radius ]
 
 set ns [new Simulator]
 
@@ -47,7 +47,7 @@ $ns node-config -adhocRouting DSR \
     -llType LL \
     -macType Mac/802_11 \
     -ifqType CMUPriQueue \
-    -ifqLen 50 \
+    -ifqLen 1000 \
     -energyModel "EnergyModel" \
     -initialEnergy 100.0 \
     -txPower .4 \
@@ -90,9 +90,9 @@ for {set i 0} {$i < $N1} {incr i} {
     # random movement
     
     $srcNodes($i) random-motion 1
-    $ns at 0.0 "$srcNodes($i) setdest [expr [rand] * $bottleNeckXOffset] [expr [rand] * $Y] [expr 1 + [rand] * $speed]"
+    $ns at 0.0 "$srcNodes($i) setdest [expr [rand] * ($bottleNeckXOffset - $radius / 2) + $radius / 2] [expr [rand] * ($Y - $radius / 2) + $radius / 2] [expr 1 + [rand] * $speed]"
     for {set j 0} {$j < 10} {incr j} {
-        $ns at [ expr $stopTime / (10 - $j) ] "$srcNodes($i) setdest [expr [rand] * $bottleNeckXOffset] [expr [rand] * $Y] [expr 1 + [rand] * $speed]"        
+        $ns at [ expr $stopTime / (10 - $j) ] "$srcNodes($i)  setdest [expr [rand] * ($bottleNeckXOffset - $radius / 2) + $radius / 2] [expr [rand] * ($Y - $radius / 2) + $radius / 2] [expr 1 + [rand] * $speed]"        
     }
 
 }
@@ -116,9 +116,9 @@ for {set i 0} {$i < $N2} {incr i} {
     # $ns initial_node_pos $sinkNodes($i) 10
 
     $sinkNodes($i) random-motion 1
-    $ns at 0.0 "$sinkNodes($i) setdest [expr rand() * $bottleNeckXOffset + $bottleNeckXOffset + ($B - 1) * $bottleNeckGap] [expr [rand] * $Y] [expr 1 + [rand] * $speed]"
+    $ns at 0.0 "$sinkNodes($i) setdest [expr rand() * ($bottleNeckXOffset - $radius / 2) + $bottleNeckXOffset + ($B - 1) * $bottleNeckGap] [expr [rand] * ($Y - $radius / 2) + $radius / 2] [expr 1 + [rand] * $speed]"
     for {set j 0} {$j < 10} {incr j} {
-        $ns at [ expr $stopTime /  (10-$j) ] "$sinkNodes($i) setdest [expr rand() * $bottleNeckXOffset + $bottleNeckXOffset + ($B - 1) * $bottleNeckGap] [expr [rand] * $Y] [expr 1 + [rand] * $speed]"        
+        $ns at [ expr $stopTime /  (10-$j) ] "$sinkNodes($i) setdest [expr rand() * ($bottleNeckXOffset - $radius / 2) + $bottleNeckXOffset + ($B - 1) * $bottleNeckGap] [expr [rand] * ($Y - $radius / 2) + $radius / 2] [expr 1 + [rand] * $speed]"        
     }
 
 }
@@ -184,7 +184,7 @@ proc stop {} {
     # exec nam offline.nam
 }
 
-$ns at [expr $stopTime + 100] "stop"
+$ns at [expr $stopTime + .01] "stop"
 $ns run
 
 
